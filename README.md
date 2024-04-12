@@ -42,22 +42,34 @@ This project is a Hospital Management System built using Node.js, Express, MySQL
 Here are some screenshots of the application:
 
 #### Home
-![Home](screenshot/home.PNG)
-
-#### Sign Up
-![Sign Up](screenshot/signup.PNG)
+![Home](screenshot/home.png)
 
 #### Dashboard
-![Dashboard](screenshot/dash.PNG)
+![Dashboard](screenshot/dashboard.png)
 
-#### Medicine Store
-![Medicine Store](screenshot/med.PNG)
+#### Sign Up
+![Sign Up](screenshot/signup.png)
 
-#### Report Generation
-![Report Generation](screenshot/report.PNG)
+#### Doctors
+![Departments](screenshot/doctors.png)
+
+#### Departments
+![Departments](screenshot/departments.png)
+
+#### Appointments
+![Departments](screenshot/appointments.png)
+
+#### Employees
+![Add Employee Leave](screenshot/employees.png)
 
 #### Add Employee Leave
-![Add Employee Leave](screenshot/leave.PNG)
+![Add Employee Leave](screenshot/leave.png)
+
+#### Medicine Store
+![Medicine Store](screenshot/store.png)
+
+#### Payroll Generation
+![Payroll Generation](screenshot/payroll.png)
 
 ---
 
