@@ -13,7 +13,7 @@ router.get('*', function(req, res, next){
 
 router.get('/',function(req,res){
     db.getallappointment(function(err,result){
-        console.log(result);
+        // //console.log(result);
         res.render('appointment.ejs',{list :result});
     })
     
@@ -35,7 +35,7 @@ router.post('/add_appointment',function(req,res){
 router.get('/edit_appointment/:id',function(req,res){
     var id = req.params.id;
     db.getappointmentbyid(id,function(err,result){
-        console.log(result);
+        //console.log(result);
         res.render('edit_appointment.ejs',{list : result});
     });
 
@@ -52,7 +52,7 @@ router.post('/edit_appointment/:id',function(req,res){
 router.get('/delete_appointment/:id',function(req,res){
     var id = req.params.id;
     db.getappointmentbyid(id,function(err,result){
-        console.log(result);
+        //console.log(result);
         res.render('delete_appointment.ejs',{list:result});
     })
     
@@ -64,13 +64,5 @@ router.post('/delete_appointment/:id',function(req,res){
         res.redirect('/appointment');
     });
 })
-
-
-
-
-
-
-
-
 
 module.exports =router;

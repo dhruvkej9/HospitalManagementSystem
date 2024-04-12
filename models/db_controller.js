@@ -1,11 +1,12 @@
 var mysql = require("mysql");
 express = require("express");
 router = express.Router();
+require('dotenv').config();
 
-con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "madhu92108",
+var con = mysql.createConnection({
+  host: process.env.SQL_HOST,
+  user: process.env.SQL_USER,
+  password: process.env.SQL_PASS,
   database: "hospital"
 });
 
@@ -20,7 +21,7 @@ con.connect(function (err) {
 
 module.exports.signup =
   function (username, email, password, status, callback) {
-    var query = "INSERT INTO `users`(`username`,`email`,`password`,`email_status`) VALUES ('" + username + "','" + email + "','" + password + "','" + status + "')";
+    var query = "INSERT INTO `users`(`username`,`email`,`password`) VALUES ('" + username + "','" + email + "','" + password + "')";
     con.query(query, callback);
   };
 
@@ -152,7 +153,7 @@ module.exports.deleteappointment =
 
 module.exports.findOne =
   function (email, callback) {
-    var query = "select *from users where email='" + email + "'";
+    var query = "select * from users where email='" + email + "'";
     con.query(query, callback); console.log(query);
   };
 
@@ -162,11 +163,11 @@ module.exports.temp =
     con.query(query, callback);
   };
 
-module.exports.checktoken =
-  function (token, callback) {
-    var query = "select *from temp where token='" + token + "'";
-    con.query(query, callback); console.log(query);
-  };
+// module.exports.checktoken =
+//   function (token, callback) {
+//     var query = "select *from temp where token='" + token + "'";
+//     con.query(query, callback); console.log(query);
+  // };
 
 module.exports.setpassword =
   function (id, newpassword, callback) {
@@ -200,7 +201,7 @@ module.exports.editmed =
 
 module.exports.getallmed =
   function (callback) {
-    var query = "select *from store order by id desc"; console.log(query);
+    var query = "select * from store order by id desc"; console.log(query);
     con.query(query, callback);
   };
 
@@ -225,7 +226,8 @@ module.exports.getAllLeave =
 module.exports.matchtoken =
   function (id, token, callback) {
     var query = "select * from `verify` where token='" + token + "' and id=" + id;
-    con.query(query, callback); console.log(query);
+    con.query(query, callback);
+    console.log(query);
   };
 
 module.exports.updateverify =

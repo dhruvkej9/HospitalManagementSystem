@@ -76,8 +76,7 @@ router.post('/delete_med/:id',function(req,res){
 router.post('/search',function(req,res){
     var key = req.body.search;
     db.searchmed(key,function(err,result){
-        console.log(result);
-        
+        //console.log(result);
         res.render('store.ejs',{list : result});
     });
 });

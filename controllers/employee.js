@@ -128,7 +128,7 @@ router.post('/delete_employee/:id',function(req,res){
 router.post('/search',function(req,res){
     var key = req.body.search;
     db.searchEmp(key,function(err,result){
-        console.log(result);
+        //console.log(result);
         
         res.render('employee.ejs',{employee : result});
     });

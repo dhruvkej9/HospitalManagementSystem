@@ -1,8 +1,7 @@
 var express = require ('express');
 var router = express.Router();
 var db = require.main.require ('./models/db_controller');
-var bodyPaser = require ('body-parser');
-
+// var bodyPaser = require ('body-parser');
 
 router.get('*', function(req, res, next){
 	if(req.cookies['username'] == null){
@@ -87,7 +86,7 @@ router.post('/edit_department/:id',function(req,res){
 router.get('/profile',function(req,res){
     var username = req.cookies['username'];
     db.getuserdetails(username,function(err,result){
-        //console.log(result);
+        ////console.log(result);
         res.render('profile.ejs',{list:result});
     });
 });
