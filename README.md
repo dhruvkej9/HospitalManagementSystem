@@ -1,5 +1,3 @@
-Certainly! Here's the updated guide with the additional step to create a `.env` file and add the database connection parameters:
-
 ## Hospital Management System
 
 This project is a Hospital Management System built using Node.js, Express, MySQL, and EJS. Follow these steps to set it up:
