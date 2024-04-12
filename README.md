@@ -1,7 +1,3 @@
-## Hospital Management System
-
-This project is a Hospital Management System built using Node.js, Express, MySQL, and EJS. Follow these steps to set it up:
-
 ### Installation
 
 1. **Clone or Download**: First, clone or download the project from the repository.
@@ -26,7 +22,14 @@ This project is a Hospital Management System built using Node.js, Express, MySQL
 
    Replace `"XXXX.."`, `"XXX.."`, and `"XXXXXX.."` with your actual MySQL database host, username, and password respectively.
 
-5. **Import Database**: Import the provided database file into your MySQL server.
+5. **Import Database**: Navigate to the project folder using the command:
+   ```
+   cd HospitalManagementSystem
+   ```
+   Then, import the provided database file into your MySQL server using the following command:
+   ```
+   source database.sql
+   ```
 
 6. **Run the Application**: Start the application by running:
    ```
@@ -72,5 +75,3 @@ Here are some screenshots of the application:
 ![Payroll Generation](screenshot/payroll.png)
 
 ---
-
-Feel free to adjust the instructions and screenshots as needed. Let me know if you need further assistance!
