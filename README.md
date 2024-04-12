@@ -1,31 +1,55 @@
-# Hospital-Management
-A hospital management system using nodejs , express , mysql , ejS
+## Hospital Management System
 
-First clone or Download the project
+This project is a Hospital Management System built using Node.js, Express, MySQL, and EJS. Follow these steps to set it up:
 
-Next open command prompt in project folder 
+### Installation
 
-Then type npm install (or you can use command npm update)
-import the database file in mysql server
-After that type nodemon app (or you can use node app) 
+1. **Clone or Download**: First, clone or download the project from the repository.
 
-Home
-![](screenshot/home.PNG)
+2. **Open Command Prompt**: Navigate to the project folder in the command prompt.
 
-Sign Up
+3. **Install Dependencies**: Run the following command to install the project dependencies:
+   ```
+   npm install
+   ```
+   or if you already have the dependencies installed and want to update them, you can use:
+   ```
+   npm update
+   ```
 
-![](screenshot/signup.PNG)
+4. **Import Database**: Import the provided database file into your MySQL server.
 
-Dash Board
-![](screenshot/dash.PNG)
+5. **Run the Application**: Start the application by running:
+   ```
+   nodemon app
+   ```
+   or
+   ```
+   node app
+   ```
 
-Medicine Store
+### Screenshots
 
-![](screenshot/med.PNG)
+Here are some screenshots of the application:
 
-Report Generate
-![](screenshot/report.PNG)
+#### Home
+![Home](screenshot/home.PNG)
 
-Add Employee Leave
-![](screenshot/leave.PNG)
-"# HospitalManagementSystem" 
+#### Sign Up
+![Sign Up](screenshot/signup.PNG)
+
+#### Dashboard
+![Dashboard](screenshot/dash.PNG)
+
+#### Medicine Store
+![Medicine Store](screenshot/med.PNG)
+
+#### Report Generation
+![Report Generation](screenshot/report.PNG)
+
+#### Add Employee Leave
+![Add Employee Leave](screenshot/leave.PNG)
+
+---
+
+Feel free to adjust the instructions and screenshots as needed. Let me know if you need further assistance!
