@@ -1,3 +1,5 @@
+Certainly! Here's the updated guide with the additional step to create a `.env` file and add the database connection parameters:
+
 ## Hospital Management System
 
 This project is a Hospital Management System built using Node.js, Express, MySQL, and EJS. Follow these steps to set it up:
@@ -17,9 +19,18 @@ This project is a Hospital Management System built using Node.js, Express, MySQL
    npm update
    ```
 
-4. **Import Database**: Import the provided database file into your MySQL server.
+4. **Create `.env` File**: Create a file named `.env` in the project folder, and add the following parameters with their respective values:
+   ```
+   SQL_HOST="XXXX.."
+   SQL_USER="XXX.."
+   SQL_PASS="XXXXXX.."
+   ```
 
-5. **Run the Application**: Start the application by running:
+   Replace `"XXXX.."`, `"XXX.."`, and `"XXXXXX.."` with your actual MySQL database host, username, and password respectively.
+
+5. **Import Database**: Import the provided database file into your MySQL server.
+
+6. **Run the Application**: Start the application by running:
    ```
    nodemon app
    ```
