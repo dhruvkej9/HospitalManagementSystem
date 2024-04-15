@@ -157,18 +157,6 @@ module.exports.findOne =
     con.query(query, callback); console.log(query);
   };
 
-module.exports.temp =
-  function (id, email, token, callback) {
-    var query = "insert into `temp` (`id`,`email`,`token`) values ('" + id + "','" + email + "','" + token + "')";
-    con.query(query, callback);
-  };
-
-// module.exports.checktoken =
-//   function (token, callback) {
-//     var query = "select *from temp where token='" + token + "'";
-//     con.query(query, callback); console.log(query);
-  // };
-
 module.exports.setpassword =
   function (id, newpassword, callback) {
     var query = "update `users` set `password`='" + newpassword + "' where id=" + id;

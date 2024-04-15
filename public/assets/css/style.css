@@ -2804,6 +2804,9 @@ a.fc-event:not([href]) {
 /*-----------------
 	21. Notifications
 -----------------------*/
+.not-show{
+	display: none !important;
+}
 
 .notifications {
 	padding: 0;

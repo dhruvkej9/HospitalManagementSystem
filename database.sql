@@ -119,8 +119,9 @@ CREATE TABLE `doctor` (
   `image` text NOT NULL,
   `department` varchar(50) NOT NULL,
   `biography` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +130,7 @@ CREATE TABLE `doctor` (
 
 LOCK TABLES `doctor` WRITE;
 /*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
-INSERT INTO `doctor` VALUES (42,'dhruv','kejriwal','dhruvkejri9@gmail.com','09/04/2024','male','G-3 107/108 Sector-16 rohini','+918076538956','carbon-neutral-vs-net-zero-understanding-the-difference-and-the-path-to-cleaner-future (1).jpg','Intensive Care Unit (ICU)','Hello'),(43,'dhruv','kejriwal','dhruvkejri9@gmail.com','09/05/2024','male','G-3 107/108 Sector-16 rohini','+918076538956','carbon-neutral-vs-net-zero-understanding-the-difference-and-the-path-to-cleaner-future (1).jpg','Intensive Care Unit (ICU)','HHHH'),(44,'dhruv','kejriwal','dhruvkejri9@gmail.com','31/03/2024','male','G-3 107/108 Sector-16 rohini','+918076538956','supporters.jpg','Intensive Care Unit (ICU)','JSKKDED');
+INSERT INTO `doctor` VALUES (45,'dhruv','kejriwal','dhruvkejri9@gmail.com','13/04/2024','male','G-3 107/108 Sector-16 rohini','+918076538956','austin-distel-7bMdiIqz_J4-unsplash.jpg','Intensive Care Unit (ICU)','Hello i am a doctor'),(46,'daljeet','singh','daljeetsingh@yahoo.in','10/05/2002','female','G4, 210, Bawana Rd, Delhi Technological University, Shahbad Daulatpur Village','+918399398948','usman-yousaf-dDPnX86E0Uc-unsplash.jpg','Orthopedics','Hello i am daljeet singh');
 /*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,34 +194,6 @@ INSERT INTO `leaves` VALUES (7,'Isaiah L. Smith',4,'Medical Leave','26/03/2020',
 UNLOCK TABLES;
 
 --
--- Table structure for table `login`
---
-
-DROP TABLE IF EXISTS `login`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `login` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`username`),
-  UNIQUE KEY `username` (`username`),
-  UNIQUE KEY `unique_email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `login`
---
-
-LOCK TABLES `login` WRITE;
-/*!40000 ALTER TABLE `login` DISABLE KEYS */;
-/*!40000 ALTER TABLE `login` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `store`
 --
 
@@ -250,30 +223,6 @@ INSERT INTO `store` VALUES (8,'Seclo','24/03/2020','2','24/03/2020','5','200'),(
 UNLOCK TABLES;
 
 --
--- Table structure for table `temp`
---
-
-DROP TABLE IF EXISTS `temp`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `temp` (
-  `id` int NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `temp`
---
-
-LOCK TABLES `temp` WRITE;
-/*!40000 ALTER TABLE `temp` DISABLE KEYS */;
-INSERT INTO `temp` VALUES (19,'test555@yopmail.com','46fn0pl3'),(19,'test555@yopmail.com','w6pvf2oq'),(21,'te555@yopmail.com','9sfs6gu8');
-/*!40000 ALTER TABLE `temp` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `users`
 --
 
@@ -288,7 +237,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`username`),
   UNIQUE KEY `unique_email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -297,7 +246,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (26,'dhruvkej9','madhu92108','dhruvkejri9@gmail.com'),(27,'dhruvkejri912','12345678','darasingh@yahoo.in');
+INSERT INTO `users` VALUES (26,'dhruvkej9','madhu92108','dhruvkejri9@gmail.com'),(27,'dhruvkejri912','12345678','darasingh@yahoo.in'),(28,'rahul','12345678','dg@6181.com'),(29,'harry','12345678','harry@codewithharry.com');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -310,4 +259,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-12 22:25:42
+-- Dump completed on 2024-04-15 10:48:13
